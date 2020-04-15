@@ -1,0 +1,19 @@
+<h2>Login</h2>
+<small *ngIf = invalidCredentials>{{errorMessage}}</small>
+<div class="form-group">
+
+    <!-- user name label -->
+    <label for="username">User Name :</label>
+    <!-- 
+        Interpolation - One way data binding
+        <input type="text" name="userName" value={{userName}}/> -->
+        <input type="text" name="user" [(ngModel)]="userName"/>  
+
+    <!-- Password label -->
+    <label for="password">Password :</label>
+    <input type="password" name="password" [(ngModel)]="password"/>
+    
+    <!-- button -->
+    <button (click) = handleClick()>Login</button>
+</div>
+  
